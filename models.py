@@ -9,6 +9,7 @@ class Course(models.Model):
 	responsible_id = fields.Many2one('res.users',ondelete='set null',string="Responsible",index=True)
 	session_ids = fields.One2many('openacademy.session','course_id',string="Session")
 	example_field = fields.Char(string="Example Field")
+
 	@api.one
 	def copy(self,default=None):
 		default = dict(default or {})
