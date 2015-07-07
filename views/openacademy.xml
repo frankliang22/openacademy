@@ -20,6 +20,7 @@
 		        <group>
 			    	<field name="name" />
 			    	<field name="responsible_id" />
+				<field name="example_field" />
 				</group>
 				<notebook>
 					<page string="Description">
