@@ -20,6 +20,6 @@
         'reports.xml',
     ],
     'demo' : [
-        
+	'demo.xml',        
     ],
 }
