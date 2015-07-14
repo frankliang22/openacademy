@@ -102,11 +102,9 @@
 							<field name="seats" />
 							<field name="taken_seats" widget="progressbar" />
 						</group>
-						<label for="attendee_ids" />
-						<field name="attendee_ids" />
-						<button name="%(launch_session_wizard)d" string="Add Attendees"
-                            type="action" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}" />
-					</group>
+							<label for="attendee_ids" />
+							<field name="attendee_ids" />
+						</group>
 				</sheet>
 			</form>
 		</field>
