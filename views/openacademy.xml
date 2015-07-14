@@ -105,7 +105,7 @@
 						<label for="attendee_ids" />
 						<field name="attendee_ids" />
 						<button name="%(launch_session_wizard)d" string="Add Attendees"
-                            type="action" class="oe_highlight" />
+                            type="action" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}" />
 					</group>
 				</sheet>
 			</form>
