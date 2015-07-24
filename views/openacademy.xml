@@ -16,11 +16,18 @@
 	    <field name="model">openacademy.course</field>
 	    <field name="arch" type="xml">
 		<form string="Courses Form">
-		    <sheet>
-		        <group>
-			    	<field name="name" />
-			    	<field name="responsible_id" />
-				<field name="example_field" />
+		    <sheet> 
+		    	<group>
+			        <group>
+				    	<field name="name" />
+				    	<field name="responsible_id" />
+						<field name="example_field" />
+					</group>
+					<div class="oe_right oe_button_box" name="buttons">
+						<button class="oe_inline oe_stat_button" type="action" name="%(session_list_action)d" icon="fa-tasks">
+        				<field string="Sessions" name="sessions_count" widget="statinfo"/>
+   						</button>
+					</div> 
 				</group>
 				<notebook>
 					<page string="Description">

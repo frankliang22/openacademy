@@ -9,6 +9,13 @@ class Course(models.Model):
 	responsible_id = fields.Many2one('res.users',ondelete='set null',string="Responsible",index=True)
 	session_ids = fields.One2many('openacademy.session','course_id',string="Session")
 	example_field = fields.Char(string="Example Field")
+	sessions_count = fields.Integer(compute='_sessions_count',string="Sessions")
+
+	@api.one
+	@api.depends('session_ids')
+	def _sessions_count(self):
+		sessions = self.env['openacademy.session'].search([('course_id', '=', self.id)])
+		self.sessions_count = len(sessions)  
 
 	@api.one
 	def copy(self,default=None):
