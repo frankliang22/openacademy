@@ -10,6 +10,7 @@ class Course(models.Model):
 	session_ids = fields.One2many('openacademy.session','course_id',string="Session")
 	example_field = fields.Char(string="Example Field")
 	sessions_count = fields.Integer(compute='_sessions_count',string="Sessions")
+	link = fields.Char(string="Link")
 
 	@api.one
 	@api.depends('session_ids')
@@ -73,7 +74,7 @@ class Session(models.Model):
 
 	@api.one
 	def action_confirm(self):
-		self.state = 'confirmed'
+		 self.state = 'confirmed'
 
 	@api.one
 	def action_done(self):
